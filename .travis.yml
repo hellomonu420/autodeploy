@@ -5,7 +5,7 @@ language: python
 services:
   - docker
 
-before_install:
+script:
   - docker build -t hackerbomzzzhack/myapp:latest .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push hackerbomzzzhack/myapp
