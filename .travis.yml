@@ -6,4 +6,8 @@ services:
 before_install:
   - docker build -t hackerbomzzzhack/myapp:latest .
 
-
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
